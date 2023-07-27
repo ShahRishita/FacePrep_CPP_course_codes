@@ -1,0 +1,18 @@
+My First C++ Program
+Write a program to print "My First C++ Program".
+
+
+Case 1
+Input (stdin)
+
+Output (stdout)
+My First C++ Program
+
+PROGRAM IN CPP
+
+#include<iostream>
+int main()
+{
+  std::cout<<"My First C++ Program";
+  return 0;
+}
