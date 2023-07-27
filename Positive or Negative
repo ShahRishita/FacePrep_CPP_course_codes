@@ -1,0 +1,42 @@
+Positive or Negative
+Elsa is new to concept of positive and negative numbers. Can you help her to check whether the given number is positive or negative.
+Input consist of an integer.
+
+[Hint : Consider zero as a positive integer]
+
+Case 1
+Case 2
+Case 3
+Input (stdin)
+45
+
+Output (stdout)
+45 is a positive number.
+
+Input (stdin)
+-87
+
+Output (stdout)
+-87 is a negative number.
+
+Input (stdin)
+14
+
+Output (stdout)
+14 is a positive number.
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n;
+  cin>>n;
+  (n>=0)?cout<<n<<" is a positive number.":cout<<n<<" is a negative number.";
+   return 0;
+}
+
+
+
