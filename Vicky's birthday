@@ -1,0 +1,54 @@
+Vicky's birthday
+Vicky's birthday is on February 29th. He can only celebrate his birthdays in leap year. Can you help Vicky to determine whether he can celebrate his birthday in the year mentioned by him.
+Input should be an integer. (Usage : nested if)
+
+Case 1
+Case 2
+Case 3
+Input (stdin)
+1996
+
+Output (stdout)
+Vicky can celebrate his birthday.
+
+Input (stdin)
+2004
+
+Output (stdout)
+Vicky can celebrate his birthday.
+
+Input (stdin)
+1995
+
+Output (stdout)
+Vicky can't celebrate.
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int year;
+   cin>>year;
+   if(year%100==0)
+   {
+     if(year%400==0)
+     {
+       cout<<"Vicky can celebrate his birthday.";
+     }
+     else
+     {
+     cout<<"Vicky can't celebrate.";}
+   }
+  else if(year%4==0)
+  {
+    cout<<"Vicky can celebrate his birthday.";
+  }
+  else
+  {
+    cout<<"Vicky can't celebrate.";
+  }
+    return 0;
+}
