@@ -1,0 +1,60 @@
+CGPA
+Hermoine is a very brilliant girl. She has completed her Semester exam. She is eagerly waiting for her CGPA. Her class adviser, Mr.Tom need to upload the CGPA of the student. Can you help him out for the same. He needs to display the CGPA of a student.
+Input Format:
+
+The input contains float which denotes the CGPA.
+
+Output Format:
+
+The output contains float which denotes the CGPA.
+
+Sample Input:
+
+4.3
+
+Sample Output:
+
+4.3
+
+Case 1
+Case 2
+Case 3
+Input (stdin)
+4.3
+
+Output (stdout)
+4.3
+
+Input (stdin)
+5.77
+
+Output (stdout)
+5.77
+
+Input (stdin)
+6.1234
+
+Output (stdout)
+6.1234
+
+PROOGRAM IN CPP
+
+#include<iostream>
+int main()
+{
+  float cgpa;
+  std::cin>>cgpa;
+  std::cout<<cgpa;
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
