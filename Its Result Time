@@ -1,0 +1,35 @@
+Its result time
+Arundhathi is a very brilliant girl. She has completed her Mathemtics exam. Mathematics is her favourite subject. She is eagerly waiting for her marks. Her mathematics professor, Mr.Ben need to upload the mark of student. Can you help him out for the same. He needs to provide the id of a student and his/ her mark along with that.
+He needs to provide the id of a student and his/ her mark along with that.
+
+Case 1
+Case 2
+Input (stdin)
+132575
+98
+
+Output (stdout)
+Id : 132575
+Totalmarks : 98
+
+Input (stdin)
+132574
+85
+
+Output (stdout)
+Id : 132574
+Totalmarks : 85
+
+PROGRAM IN CPP
+
+#include<iostream>
+int main()
+{
+  int Id,Totalmarks;
+  std::cin>>Id;
+  std::cin>>Totalmarks;
+  std::cout<<"Id : "<<Id<<"\n";
+  std::cout<<"Totalmarks : "<<Totalmarks;
+  return 0;
+}
+
