@@ -1,0 +1,59 @@
+Kaprekar number
+Consider an n-digit number k. Square it and add the right n digits to the left n or n-1 digits. If the resultant sum is k, then k is called a Kaprekar number. For example, 9 is a Kaprekar number since 92 = 81 & 8 + 1 = 9 297 is a Kaprekar number as 2972 = 88209 & 88 + 209 = 297 Write a program to find whether the given number is a Kaprekar number or not.
+INPUT & OUTPUT FORMAT:
+
+Input consists of a single integer.
+
+Refer sample output for details.
+
+SAMPLE INPUT & OUTPUT:
+
+9
+
+Kaprekar Number
+
+
+Input (stdin)
+45
+
+Output (stdout)
+Kaprekar Number
+
+Input (stdin)
+3
+
+Output (stdout)
+Not a Kaprekar Number
+
+Input (stdin)
+25
+
+Output (stdout)
+Not a Kaprekar Number
+
+PROGRAM IN CPP
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main() 
+{
+  int n, square,temp, count = 0, sum1 = 0, sum2 = 0;
+  cin>>n;
+  temp = n;
+  square = n*n;
+  while(temp>0)
+  {
+    count++;
+    temp /= 10;
+  }
+  int a = pow(10,count);
+  sum1 = square%a;
+  sum2 = square/a;
+  if(sum1 + sum2 == n )
+    cout<<"Kaprekar Number";
+  else
+    cout<<"Not a Kaprekar Number";
+  return 0;
+}
