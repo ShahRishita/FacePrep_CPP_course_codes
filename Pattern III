@@ -1,0 +1,84 @@
+Pattern III
+Write a program to print the following pattern.
+Sample Input:
+
+5
+
+Sample Output:
+
+1 
+2*2 
+3*3*3 
+4*4*4*4 
+5*5*5*5*5 
+5*5*5*5*5 
+4*4*4*4 
+3*3*3 
+2*2 
+1
+Case 1
+Case 2
+Case 3
+Input (stdin)
+5
+
+Output (stdout)
+1
+2*2
+3*3*3
+4*4*4*4
+5*5*5*5*5
+5*5*5*5*5
+4*4*4*4
+3*3*3
+2*2
+1
+
+
+Input (stdin)
+4
+
+Output (stdout)
+1
+2*2
+3*3*3
+4*4*4*4
+4*4*4*4
+3*3*3
+2*2
+1
+
+Input (stdin)
+3
+
+Output (stdout)
+1
+2*2
+3*3*3
+3*3*3
+2*2
+1
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n,j,k=0;
+  cin>>n;
+  for(int i=1 ; i<=n ; i++)
+  {
+    for(j=k+1 ; j<k+i ; j++)
+      cout<<i<<"*";
+    cout<<j++<<endl;
+  }
+  for(int i=n ; i>=1 ; i--)
+  {
+    for(j=k+1 ; j<k+i ; j++)
+      cout<<i<<"*";
+    cout<<j++<<endl;
+  }
+  return 0;
+}
