@@ -1,0 +1,72 @@
+Pattern IV
+Write a program to print the given below pattern.
+Sample Input:
+5
+
+Sample Output:
+
+11112
+32222
+33334
+54444
+55556
+
+
+Input (stdin)
+5
+
+Output (stdout)
+11112
+32222
+33334
+54444
+55556
+
+Input (stdin)
+3
+
+Output (stdout)
+112
+322
+334
+
+Input (stdin)
+2
+
+Output (stdout)
+12
+32
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n,k=1;
+  cin>>n;
+  for(int i=1;i<=n;i++)
+  {
+    for(int j=1;j<=n;j++)
+    {
+      if(i%2 != 0)
+      {
+        if(j==n)
+          cout<<k+1;
+        else
+          cout<<k;
+      }
+      else
+      {
+        if(j==1)
+          cout<<k+1;
+        else
+          cout<<k;
+      }
+    }
+    k++;
+    cout<<endl;
+  }
+  return 0;
+}
