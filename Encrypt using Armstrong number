@@ -1,0 +1,61 @@
+Encrypt using Armstrong number
+Nowadays, we use social media a lot. We usually send messages, pictures, etc to each other. So, encrypting and decrypting should be done properly to avoid hacking. Irin is developing a program for the same where color encrypting is done with the help of Armstrong numbers. Can you help Irin to write program to check whether a number is an Armstrong number or not.
+
+
+Input (stdin)
+153
+
+Output (stdout)
+Kindly proceed with encrypting
+
+Input (stdin)
+154
+
+Output (stdout)
+It is not an Armstrong number
+
+Input (stdin)
+1634
+
+Output (stdout)
+Kindly proceed with encrypting
+
+PROGRAM IN CPP
+
+#include<iostream>
+int power(int m,int n)
+{
+    int j,i;
+    for(i=1,j=1;i<=n;i++)
+        j=j*m;
+    return j;
+}
+int arm(int n)
+{	int count=0, temp1 = n, temp2 =n, sum =0;
+   while(n>0)
+   {
+     n = n/10;
+     count++;
+   }
+ int rem =0;
+ while(temp1>0)
+ {
+   rem = temp1%10;
+   sum += power(rem,count);
+   temp1= temp1/10;
+ }
+ if(sum == temp2)
+   return 1;
+ else 
+   return 0;
+}
+int main()
+{
+    int n;
+    std::cin>>n;
+    if(arm(n)==1)
+        std::cout<<"Kindly proceed with encrypting";
+    else
+        std::cout<<"It is not an Armstrong number";
+    
+}
