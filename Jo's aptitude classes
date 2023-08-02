@@ -1,0 +1,56 @@
+Jo's aptitude classes
+Jo is an aptitude trainer. She takes classes for college students for placements. She teaches students to find out highest common factor of three numbers. She has given homework for them to find out the same. Kindly help her to check whether their answers are correct or not.
+
+
+Input (stdin)
+1
+2
+3
+3
+
+Output (stdout)
+Answer is wrong.
+
+Input (stdin)
+2
+4
+6
+2
+
+Output (stdout)
+Answer is correct.
+
+Input (stdin)
+1
+2
+3
+3
+
+Output (stdout)
+Answer is wrong.
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n1, n2, n3, ans=1, gcd=1, small = 0;
+  cin>>n1>>n2>>n3;
+  cin>>ans;
+  n3<n2 ? ((n3<n1)?small=n3:small=n1) : ((n2<n1)?small=n2:small=n1);
+  for(int i=small;i>=1;i--)
+  {
+    if( n1%i==0 && n2%i==0 && n3%i==0)
+    { 
+      gcd = i;
+      break;
+    }
+  }
+  if(gcd == ans)
+    cout<<"Answer is correct.";
+  else
+    cout<<"Answer is wrong.";
+  return 0;
+}
