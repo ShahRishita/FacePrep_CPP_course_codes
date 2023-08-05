@@ -1,0 +1,68 @@
+Digit root of a given number
+Write a program to find the repeated sum of digits of a number until it becomes a single-digit number.
+Input Format:
+
+The input contains an integer which denotes 'n'
+
+Output Format:
+
+Print the single digit number
+
+Sample Input
+
+88
+
+Sample Output
+
+7
+
+Explanation:
+
+Step 1: 8+8 = 16
+Step 2: 1+6 = 7
+sum of digits of a number until it becomes a single-digit number which is 7 here.
+
+
+Input (stdin)
+99
+
+Output (stdout)
+9
+
+Input (stdin)
+887
+
+Output (stdout)
+5
+
+Input (stdin)
+772
+
+Output (stdout)
+7
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+
+int DigitSum(int n)
+{
+  int sum = 0;
+  if(n<10)
+    return n;
+  while(n != 0)
+  {
+    sum += n%10;
+    n = n/10;
+  }
+  return DigitSum(sum);
+}
+
+int main() 
+{
+  int n;
+  cin>>n;
+  cout<<DigitSum(n);
+  return 0;
+}
