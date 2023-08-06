@@ -1,0 +1,88 @@
+Puzzle
+Raju has a square-shaped puzzle made up of small square pieces containing numbers on them. He wants to rearrange the puzzle by changing the elements of a row into a column element and column element into a row element. Help Raju to solve this puzzle.
+Input Format:
+
+The first input contains an integer 'r' which denotes the number of rows in puzzle
+The second input contains an integer 'c' which denotes the number of columns in puzzle
+The remaining input denotes the numbers on square shaped puzzle
+
+Output Format:
+Print the solved puzzle
+
+Sample Input:
+2
+2
+2 3
+4 5
+
+Sample Output:
+2 4
+3 5
+
+Input (stdin)
+2
+3
+1 2 3
+4 5 6
+
+Output (stdout)
+1 4
+2 5
+3 6
+
+Input (stdin)
+3
+3
+5 6 8
+1 4 7
+2 1 4
+
+Output (stdout)
+5 1 2
+6 4 1
+8 7 4
+
+Input (stdin)
+2
+2
+3 4
+6 7
+
+Output (stdout)
+3 6
+4 7
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int r, c;
+  cin>>r>>c;
+  int puzzle[r][c], transpose[c][r];
+  for(int i=0;i<r;i++)
+  {
+    for(int j=0;j<c;j++)
+    {
+      cin>>puzzle[i][j];
+    }
+  }
+  for(int i=0;i<r;i++)
+  {
+    for(int j=0;j<c;j++)
+    {
+      transpose[j][i] = puzzle[i][j];
+    }
+  }
+  for(int i=0;i<c;i++)
+  {
+    for(int j=0;j<r;j++)
+    {
+      cout<<transpose[i][j]<<" ";
+    }
+    cout<<endl;
+  }
+ return 0;
+}
