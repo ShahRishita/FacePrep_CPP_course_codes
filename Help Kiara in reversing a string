@@ -1,0 +1,47 @@
+Help Kiara in reversing a string
+Please help Kiara to write the correct code to reverse a string.
+
+
+Case 1
+Case 2
+Case 3
+Input (stdin)
+Hai
+
+Output (stdout)
+iaH
+
+Input (stdin)
+Hello
+
+Output (stdout)
+olleH
+
+Input (stdin)
+ Oh my god!
+
+Output (stdout)
+!dog ym hO
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  char str[100], rev[100];     
+  int count = 0, end, i;    
+  cin.getline(str,100);
+  while(str[count] != '\0')
+    count++;
+  end = count - 1;
+  for(i=0;i<count;i++)
+  {
+    rev[i] =  str[end];
+    end--;
+    cout<<rev[i];
+  }
+  
+  return 0;
+}
