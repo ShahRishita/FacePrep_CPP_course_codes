@@ -1,0 +1,36 @@
+Reverse your friend's name
+Your friend wants to see the pronunciation of his/ her name when it gets reversed. Help him/ her to find the reversed string using program.
+
+Input (stdin)
+Naveen Kumar
+
+Output (stdout)
+ramuK neevaN
+
+Input (stdin)
+valentina
+
+Output (stdout)
+anitnelav
+
+Input (stdin)
+Rose chris
+
+Output (stdout)
+sirhc esoR
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  string name;
+  getline(cin,name);
+  for(string::reverse_iterator i = name.rbegin();i<name.rend();i++)
+  	cout<< *i;
+  return 0;
+}
+
+
