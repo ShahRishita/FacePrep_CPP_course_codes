@@ -1,0 +1,47 @@
+Help Tia to extract decimals
+Tia is new to programming.
+She needs to write a program which will receive the input as a floating point number.
+She needs to print the decimal part of the floating point of the number. 
+She has written a few lines of code. Can you fill up the rest.
+Read the input as string. Use string operations on the input to derive the answer easily.
+
+Input (stdin)
+-955.444
+
+Output (stdout)
+Floating part is : 444
+
+Input (stdin)
+5210.0
+
+Output (stdout)
+Floating part is : 0
+
+PROGRAM IN CPP
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+
+int main() 
+{ int pos;
+  string num,result;
+  cin>>num;
+  pos = num.find(".");
+  if(pos>0)
+    result.assign(num,pos+1);
+  cout<<"Floating part is : "<<result;
+  return 0;
+ 
+ /*
+  for(int i=0;i<num.length();i++)
+  {
+    if(num[i]=='.')
+    {
+      result.assign(num,i+1);
+      break;
+    }
+  }
+  cout<<"Floating part is : "<<result;
+ */
+}
