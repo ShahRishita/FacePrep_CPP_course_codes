@@ -7,24 +7,54 @@ Input consists of two strings.
 Assume that the maximum length of the string is 50 and it contains only alphabets.
 
 OUTPUT FORMAT:
-
 Refer sample input and output for formatting specifications.
 
 SAMPLE INPUT & OUTPUT:
-
 Excellent
-
 Excellent
-
 It is correct
 
-Case 1
-Case 2
-Case 3
 Input (stdin)
 FACE
 FACE
 
 Output (stdout)
 It is correct
+
+Input (stdin)
+CodeLab
+Code
+
+Output (stdout)
+It is wrong
+
+Input (stdin)
+Ball
+Ball
+
+Output (stdout)
+It is correct
+
+PROGRAM IN CPP
+
+#include <iostream>
+#include<string.h>
+
+using namespace std;
+
+int main() 
+{
+  char str1[50], str2[50];
+  cin>>str1>>str2;
+  // if two string are identical then the strcmp function returns zero.
+  if(!strcmp(str1,str2))
+  {
+    cout<<"It is correct";
+  }
+  else
+  {
+    cout<<"It is wrong";
+  }
+}
+
 
