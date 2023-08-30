@@ -1,0 +1,18 @@
+Student data entry
+It is the first day in school. The kids need to enroll their data in system. Teacher calls one by one to enter the data. They need to enter their data and need to check the display their details.
+[Hint : use structure to store the details of student]
+
+Case 1
+Case 2
+Case 3
+Input (stdin)
+Christy Rose
+57
+82
+
+Output (stdout)
+
+Student Details
+Name: Christy Rose
+Roll: 57
+Marks: 82
