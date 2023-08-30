@@ -1,0 +1,99 @@
+Complex number calculator
+Ryan is appearing for a techathon that offers price money of 10K for the winner. 
+Techathon has provided a platform where an incomplete code will appear, and the participants have to complete it. 
+Ryan got a program where he needs to create a complex calculator. Can you help Ryan win this competition?
+The first line consists of a choice which is an integer to choose from 1 to 3. 
+Choice 1 represents addition of two complex numbers, 2 represents subtraction of two complex numbers and 3 represents the multiplication of two complex numbers.
+
+Input (stdin)
+3
+5
+8
+6
+-10
+
+Output (stdout)
+110-2i
+
+Input (stdin)
+2
+65
+565
+15
+-89
+
+Output (stdout)
+50+654i
+
+Input (stdin)
+4
+15
+25
+-9
+-89
+
+Output (stdout)
+Invalid choice
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+struct complex
+{
+  float real;
+  float imag;
+  void addition(complex c1, complex c2)
+  {
+    float a,b;
+    a = c1.real+c2.real;
+    b = c1.imag+c2.imag;
+    if(b>0)
+      cout<<a<<"+"<<b<<"i";
+    else
+      cout<<a<<b<<"i";
+  }
+  void subtraction(complex c1, complex c2)
+  {
+    float a,b;
+    a = c1.real-c2.real;
+    b = c1.imag-c2.imag;
+    if(b>0)
+      cout<<a<<"+"<<b<<"i";
+    else
+      cout<<a<<b<<"i";
+  }
+  void multiply(complex c1, complex c2)
+  {
+    float a,b;
+    a = (c1.real*c2.real) - (c1.imag*c2.imag);
+    b = (c1.real*c2.imag) + (c2.real*c1.imag);
+    if(b>0)
+      cout<<a<<"+"<<b<<"i";
+    else
+      cout<<a<<b<<"i";
+  }
+};
+
+int main() 
+{
+  complex c, c1, c2;
+  int choice;
+  cin>>choice;
+  cin>>c1.real>>c1.imag;
+  cin>>c2.real>>c2.imag;
+  switch(choice)
+  {
+    case 1: c.addition(c1,c2);
+      		break;
+    case 2: c.subtraction(c1,c2);
+      		break;
+    case 3: c.multiply(c1,c2);
+      		break;
+    default: cout<<"Invalid choice";
+  }
+  return 0;
+}
+
+
+
