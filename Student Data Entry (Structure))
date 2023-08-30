@@ -16,3 +16,51 @@ Student Details
 Name: Christy Rose
 Roll: 57
 Marks: 82
+
+Input (stdin)
+Akalya Devi
+40
+88
+
+Output (stdout)
+
+Student Details
+Name: Akalya Devi
+Roll: 40
+Marks: 88
+
+Input (stdin)
+Sadhwanie K
+85
+80
+
+Output (stdout)
+
+Student Details
+Name: Sadhwanie K
+Roll: 85
+Marks: 80
+
+PROGRAM IN CPP
+
+#include <iostream>
+using namespace std;
+struct student
+{
+    char name[50];
+    int roll;
+    float marks;
+};
+
+int main() 
+{
+  student s;
+  cin.getline(s.name,100);
+  cin>>s.roll;
+  cin>>s.marks;
+  cout<<"\nStudent Details\n";
+  cout<<"Name: "<<s.name<<endl;
+  cout<<"Roll: "<<s.roll<<endl;
+  cout<<"Marks: "<<s.marks;
+  return 0;
+}
