@@ -68,6 +68,12 @@ if(d.minute1 < d.minute2)
   d.minute1 += 60;
   d.hour1--;
 }
+/*
+  11 25		10 85
+  6  45
+  
+  4  40
+*/
 diff_minute = d.minute1 - d.minute2;
 diff_hour = d.hour1 - d.hour2;   
 cout<<diff_hour<<":"<< diff_minute <<":"<<diff_second;  
